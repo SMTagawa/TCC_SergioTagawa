@@ -62,7 +62,11 @@ table(TCC1$cargo)
 table(TCC1$formatrabalhoatual)
 
 ################################################################################
+<<<<<<< HEAD
 #TRANSFORMANDO VARIÁVEIS EM FACTOR                                             #
+=======
+TRANSFORMANDO VARIÁVEIS EM FACTOR                                              #
+>>>>>>> af3e9ff5efd4674d9b349df6117947582b0b26bd
 ################################################################################
 TCC1$buscar<-as.factor(TCC1$buscar) 
 TCC1$satisfeito<-as.factor(TCC1$satisfeito) 
@@ -84,10 +88,20 @@ TCC1$formatrabalhoatual<-as.factor(TCC1$formatrabalhoatual)
 glimpse(TCC1)
 
 
+<<<<<<< HEAD
 ################################################################################
 #                    PROCEDIMENTO N-1 DUMMIES                                  #
 ################################################################################
 #Dummizando as variáveis abaixo:# 
+=======
+##############################################################################
+#                    PROCEDIMENTO N-1 DUMMIES                                #
+##############################################################################
+#Dummizando as variáveis atendimento, sortimento, acessibilidade e preço. O 
+#código abaixo, automaticamente, fará: a) a dummização das variáveis originais;
+#b)removerá as variáveis dummizadas originais; c) estabelecerá como categorias 
+#de referência as categorias de label 1 de cada variável original.
+>>>>>>> af3e9ff5efd4674d9b349df6117947582b0b26bd
 
 TCC1_dummies <- dummy_columns(.data = TCC1,
                               select_columns = c("satisfeito",
@@ -110,9 +124,15 @@ TCC1_dummies <- dummy_columns(.data = TCC1,
                               remove_first_dummy = T)
 
 
+<<<<<<< HEAD
 ################################################################################
 #                       ESTIMANDO O MODELO                                     #
 ################################################################################
+=======
+##############################################################################
+#                       ESTIMANDO O MODELO                                   #
+##############################################################################
+>>>>>>> af3e9ff5efd4674d9b349df6117947582b0b26bd
 #Visualizando a base de dados fidelidade_dummies
 TCC1_dummies %>%
   kable() %>%
